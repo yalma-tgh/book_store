@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+    <head>
+        <link rel="icon" href="{% static 'favicon.ico' %}">
+    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <h1>Books</h1>
+    <ul>
+        {% for book in books %}
+            <li>
+                <strong>{{ book.title }}</strong> by {{ book.author }} ({{ book.publication_date }}) - ${{ book.price }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
